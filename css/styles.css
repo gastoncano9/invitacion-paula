@@ -1,0 +1,456 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face
+{
+    src: url("../css/fuentes/dancing-bold.ttf");
+    font-family: "dancing-bold";
+}
+
+@font-face
+{
+    src: url("../css/fuentes/dancing-regular.ttf");
+    font-family: "dancing-regular";
+}
+
+@font-face
+{
+    src: url("../css/fuentes/dancing-medium.ttf");
+    font-family: "dancing-medium";
+}
+
+@font-face
+{
+    src: url("../css/fuentes/whisper-regular.ttf");
+    font-family: "whisper-regular";
+}
+
+@font-face
+{
+    src: url("../css/fuentes/beau-regular.ttf");
+    font-family: "beau-regular";
+}
+
+@font-face
+{
+    src: url("../css/fuentes/Roboto-Light.ttf");
+    font-family: "roboto-light";
+}
+
+@font-face
+{
+    src: url("../css/fuentes/Roboto-Regular.ttf");
+    font-family: "roboto-regular";
+}
+
+.linea
+{
+    border: 1.8px solid black;
+    width: 200px;
+    margin: 0px auto;
+}
+
+#cabecera
+{
+    width: 100%;
+    height: 600px;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("../imagenes/nuestras-fotos/cabecera-oscura.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:0%;
+    color: black;
+}
+
+#cabecera .contenedor-nombres
+{
+    text-align: center;
+    font-size: 40px;
+    font-family:"beau-regular";
+    color: white;
+    font-weight: lighter;
+}
+
+#cabecera .natalia
+{
+    text-align: center;
+    color: white;
+}
+
+#cabecera .natalia 
+{
+    font-family:  "dancing-regular";
+    font-weight: lighter;
+    padding: 6px 0px;
+    font-size: 18px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#contenido-principal
+{
+    background-image: url("../imagenes/nuestras-fotos/background.png");
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.temporizador
+{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: "beau-regular";
+}
+
+.temporizador h3
+{
+    font-size: 40px;
+}
+
+.temporizador #tiempo
+{
+    width: 400px;
+    height: 200px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.562);
+    background-position: center;
+    background-size: cover;
+    border-radius:10px;
+    color:white
+}
+
+.temporizador #tiempo div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temporizador #tiempo div span
+{
+    font-size: 30px;
+    font-family: "beau-regular";
+}
+
+.contenedor-fecha h3 span
+{
+    font-weight: lighter;
+}
+
+.slider-dos
+{
+    margin-top: 20px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.slider-dos h3
+{
+    font-size: 40px;
+    font-family: "beau-regular";
+    color: black;
+}
+
+.slider-dos .swiffy-slider
+{
+    width: 400px;
+    margin: 30px auto 0px auto;
+}
+
+.slider-dos .swiffy-slider li
+{
+    height: 350px;
+    width: 100%;
+}
+
+.slider-dos .swiffy-slider #imagen-1
+{
+    background-image: url("../imagenes/nuestras-fotos/imagen-5.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.slider-dos .swiffy-slider #imagen-2
+{
+    background-image: url("../imagenes/nuestras-fotos/imagen-10.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.slider-dos .swiffy-slider #imagen-3
+{
+    background-image: url("../imagenes/nuestras-fotos/imagen-3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.slider-dos .swiffy-slider #imagen-4
+{
+    background-image: url("../imagenes/nuestras-fotos/imagen-4.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.slider-dos .swiffy-slider #imagen-5
+{
+    background-image: url("../imagenes/nuestras-fotos/imagen-11.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.slider-dos .swiffy-slider #imagen-6
+{
+    background-image: url("../imagenes/nuestras-fotos/imagen-2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.datos-boda
+{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-versiculo
+{
+    background: rgba(0, 0, 0, 0.562);
+    border-radius:10px;
+}
+
+.datos-boda .versiculo
+{
+    width: 600px;
+    padding: 30px;
+    box-shadow: 2px 2px 15px white;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.datos-boda .versiculo h4
+{
+    font-family: "beau-regular";
+    font-size: 30px;
+}
+
+.datos-boda .versiculo p
+{
+    margin-top: 20px;
+    font-family: "beau-regular";
+    font-size: 23px;
+}
+
+.datos-boda .contenedor-datos
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.datos-boda .contenedor-datos article
+{
+    width: 300px;
+    box-shadow: 2px 2px 15px white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+    font-family: "beau-regular";
+    color: white;
+}
+
+.datos-boda .contenedor-datos article span
+{
+    font-size: 12px;
+    font-family: "roboto-regular";
+}
+
+.ubicacion
+{
+    background: rgba(0, 0, 0, 0.562);
+    border-radius:10px;
+}
+
+.datos-boda .contenedor-datos .ubicacion a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.datos-boda .contenedor-datos .ubicacion a i
+{
+    color: white;
+}
+
+.codigo-vestimenta
+{
+    background: rgba(0, 0, 0, 0.562);
+    border-radius:10px;
+}
+
+.confirmacion
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    padding-bottom: 35px;
+}
+
+.confirmacion .contenedor-confirmacion
+{
+    width: 600px;
+    padding: 30px;
+    box-shadow: 2px 2px 15px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "beau-regular";
+    color: white;
+    background: rgba(0, 0, 0, 0.562);
+    border-radius:10px;
+}
+
+.confirmacion .contenedor-confirmacion .titulo-asistencia
+{
+    font-size: 23px;
+}
+
+.confirmacion .contenedor-confirmacion .parrafo-confirmacion
+{
+    font-size: 27px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.confirmacion .contenedor-confirmacion .botones-confirmacion
+{
+    margin-top: 15px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confirmacion .contenedor-confirmacion .botones-confirmacion a
+{
+    display: block;
+    background: white;
+    width: 140px;
+    height: 35px;
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+}
+
+footer
+{
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+@media(max-width:630px)
+{
+    .contenedor-datos
+    {
+        flex-wrap: wrap;
+    }
+
+    .contenedor-confirmacion
+    {
+        width: 480px !important;
+    }
+
+    .datos-boda .versiculo
+    {
+        width: 480px !important;
+    }
+
+    #cabecera .contenedor-nombres
+    {
+        font-size: 30px;
+    }
+
+    .datos-boda .contenedor-datos article
+    {
+        margin: 10px;
+    }
+}
+
+@media(max-width:500px)
+{
+    .contenedor-versiculo
+    {
+        width: 300px;
+    }
+
+    .datos-boda .versiculo
+    {
+        width: 300px !important;
+    }
+
+    .confirmacion
+    {
+        width: 300px !important;
+        margin: 20px auto 0px auto; 
+    }
+
+    .contenedor-confirmacion
+    {
+        width: 300px !important;
+    }
+
+    .confirmacion .contenedor-confirmacion .botones-confirmacion 
+    {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+    .temporizador #tiempo
+    {
+        width: 320px;
+    }
+}
+
+@media(max-width:450px)
+{
+    .slider-dos .swiffy-slider
+    {
+        width: 320px;
+    }
+
+    .natalia
+    {
+        margin-bottom: 100px;
+    }
+}
