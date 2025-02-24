@@ -5,6 +5,19 @@
     box-sizing: border-box;
 }
 
+body
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../imagenes/nuestras-fotos/body.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @font-face
 {
     src: url("../css/fuentes/dancing-bold.ttf");
@@ -391,20 +404,39 @@ footer
     text-align: center;
     flex-direction: column;
     font-size:20px;
+    padding:30px;
 }
 
-.portada h1 {
-    font-size: 3em;
+.portada div
+{
+    background: rgba(0, 0, 0, 0.319);
+    border-radius: 10px;
+    padding: 30px;
+    width: 350px;
     margin-bottom: 20px;
 }
 
-.portada button {
+.portada h1 
+{
+    font-weight: bold;
+    background: linear-gradient(to right, white, #f8c8dc);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2em;
+    font-family: "dancing-regular";
+}
+
+.portada button 
+{
     padding: 15px 30px;
-    font-size: 1.5em;
+    font-size: 1em;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background: white;
+    color: black;
+    border: 1px solid black;
 }
 
 /* Estilos para la invitación */
@@ -456,6 +488,31 @@ audio {
     .datos-boda .contenedor-datos article
     {
         margin: 10px;
+    }
+}
+
+@media(max-width:550px)
+{
+    .portada
+    {
+        width: 330px;
+        height: 330px;
+    }
+
+    .portada div
+    {
+        width: 210px;
+        padding: 20px;
+    }
+
+    .portada h1
+    {
+        font-size: 1.5em;
+    }
+
+    .portada button
+    {
+        font-size: .9em;
     }
 }
 
