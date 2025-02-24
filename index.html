@@ -134,15 +134,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let audio = document.getElementById("miAudio");
 
     function reproducirAudio() {
-        if (audio.paused) {
-            audio.play().catch(error => console.log("Autoplay bloqueado:", error));
-        }
+        audio.play().catch(error => console.log("Autoplay bloqueado:", error));
         document.removeEventListener("scroll", reproducirAudio);
     }
 
-    document.addEventListener("scroll", reproducirAudio, { once: true });
+    // Creamos un botón invisible y lo "clickeamos" en el primer scroll
+    let boton = document.createElement("button");
+    boton.style.display = "none";
+    document.body.appendChild(boton);
+    
+    document.addEventListener("scroll", function () {
+        boton.click();
+    }, { once: true });
+
+    boton.addEventListener("click", reproducirAudio);
 });
-        </script>
+</script>
     </footer>
 </body>
 </html>
