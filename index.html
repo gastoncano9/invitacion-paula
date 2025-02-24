@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <audio id="miAudio" src = "musica/cancion.mp3" controls muted style="z-index:1000;"></audio>
+        <audio id="miAudio" src = "musica/cancion.mp3" controls style="z-index:1000;"></audio>
     </header>
     <main id = "contenido-principal">
         <section class = "temporizador">
@@ -130,16 +130,60 @@
             });
         </script>
         <script>
-           document.addEventListener("DOMContentLoaded", function () {
-    let audio = new Audio("musica/cancion.mp3"); 
-    audio.autoplay = true;
-    audio.muted = true; 
+           Aquí tienes un script que reproducirá el audio automáticamente cuando el usuario haga scroll por primera vez en la página:
 
-    setTimeout(() => {
-        audio.muted = false;
+document.addEventListener("DOMContentLoaded", function () {
+    let audio = new Audio("musica/cancion.mp3");
+    audio.muted = false;
+
+    function reproducirAudio() {
         audio.play().catch(error => console.log("Autoplay bloqueado:", error));
-    }, 500);
+        document.removeEventListener("scroll", reproducirAudio);
+    }
+
+    document.addEventListener("scroll", reproducirAudio, { once: true });
 });
+
+Cómo funciona:
+
+1. Se crea un objeto Audio con la canción.
+
+
+2. Se espera a que el usuario haga scroll por primera vez.
+
+
+3. En ese momento, se reproduce el audio.
+
+
+4. Se elimina el evento para que no se vuelva a ejecutar.
+
+
+
+
+---
+
+Alternativa: Iniciar el Audio Solo si Está en Pausa
+
+Si quieres asegurarte de que el audio solo se inicie si aún no ha sido reproducido, puedes hacer esto:
+
+document.addEventListener("DOMContentLoaded", function () {
+    let audio = new Audio("musica/cancion.mp3");
+    audio.muted = false;
+
+    function reproducirAudio() {
+        if (audio.paused) {
+            audio.play().catch(error => console.log("Autoplay bloqueado:", error));
+        }
+        document.removeEventListener("scroll", reproducirAudio);
+    }
+
+    document.addEventListener("scroll", reproducirAudio, { once: true });
+});
+
+Prueba el código y dime si te funciona.
+
+
+
         </script>
 
     </footer>
