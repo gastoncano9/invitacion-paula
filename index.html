@@ -130,8 +130,6 @@
             });
         </script>
         <script>
-           Aquí tienes un script que reproducirá el audio automáticamente cuando el usuario haga scroll por primera vez en la página:
-
 document.addEventListener("DOMContentLoaded", function () {
     let audio = new Audio("musica/cancion.mp3");
     audio.muted = false;
@@ -143,28 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("scroll", reproducirAudio, { once: true });
 });
-
-Cómo funciona:
-
-1. Se crea un objeto Audio con la canción.
-
-
-2. Se espera a que el usuario haga scroll por primera vez.
-
-
-3. En ese momento, se reproduce el audio.
-
-
-4. Se elimina el evento para que no se vuelva a ejecutar.
-
-
-
-
----
-
-Alternativa: Iniciar el Audio Solo si Está en Pausa
-
-Si quieres asegurarte de que el audio solo se inicie si aún no ha sido reproducido, puedes hacer esto:
 
 document.addEventListener("DOMContentLoaded", function () {
     let audio = new Audio("musica/cancion.mp3");
@@ -179,10 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("scroll", reproducirAudio, { once: true });
 });
-
-Prueba el código y dime si te funciona.
-
-
 
         </script>
 
