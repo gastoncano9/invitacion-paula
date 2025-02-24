@@ -376,17 +376,21 @@ footer
     text-align: center;
 }
 
-.portada {
+.portada 
+{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    width:500px;
+    height: 500px;
+    border-radius:50%;
     background-image: url("../imagenes/nuestras-fotos/background.png");
     background-position: center;
     background-attachment: fixed;
     color: white;
     text-align: center;
     flex-direction: column;
+    font-size:20px;
 }
 
 .portada h1 {
