@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <audio src = "musica/cancion.mp3" controls autoplay style="z-index:1000;"></audio>
+        <audio id="miAudio" src = "musica/cancion.mp3" controls muted style="z-index:1000;"></audio>
     </header>
     <main id = "contenido-principal">
         <section class = "temporizador">
@@ -129,6 +129,14 @@
                 $(this).html(event.strftime('<div><span>%D</span><span>Dias</span></div> <div><span>%H</span><span>Horas</span></div> <div><span>%M</span><span>Minutos</span></div> <div><span>%S</span><span>Segundos</span></div>'));
             });
         </script>
+        <script>
+    setTimeout(() => {
+        let audio = document.getElementById("miAudio");
+        audio.muted = false;
+        audio.play().catch(error => console.log("Error al reproducir el audio:", error));
+    }, 500);
+</script>
+
     </footer>
 </body>
 </html>
