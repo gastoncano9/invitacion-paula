@@ -130,21 +130,9 @@
             });
         </script>
         <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-    let audio = new Audio("musica/cancion.mp3");
-    audio.muted = false;
-
-    function reproducirAudio() {
-        audio.play().catch(error => console.log("Autoplay bloqueado:", error));
-        document.removeEventListener("scroll", reproducirAudio);
-    }
-
-    document.addEventListener("scroll", reproducirAudio, { once: true });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    let audio = new Audio("musica/cancion.mp3");
-    audio.muted = false;
+    let audio = document.getElementById("miAudio");
 
     function reproducirAudio() {
         if (audio.paused) {
@@ -155,9 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("scroll", reproducirAudio, { once: true });
 });
-
+</script>
         </script>
-
     </footer>
 </body>
 </html>
